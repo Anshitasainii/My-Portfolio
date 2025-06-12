@@ -1,61 +1,54 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 const CustomCursor: React.FC = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [cursorVariant, setCursorVariant] = useState('default');
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const springConfig = { damping: 15, stiffness: 300 };
+  const cursorX = useSpring(mouseX, springConfig);
+  const cursorY = useSpring(mouseY, springConfig);
+
+  const [variant, setVariant] = useState<'default' | 'link'>('default');
 
   useEffect(() => {
-    const mouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: e.clientX,
-        y: e.clientY,
-      });
+    const moveCursor = (e: MouseEvent) => {
+      mouseX.set(e.clientX - 8); // Center the dot
+      mouseY.set(e.clientY - 8);
     };
 
-    const handleLinkHover = () => setCursorVariant('link');
-    const handleLinkLeave = () => setCursorVariant('default');
-
-    window.addEventListener('mousemove', mouseMove);
+    window.addEventListener('mousemove', moveCursor);
 
     const links = document.querySelectorAll('a, button');
-    links.forEach((link) => {
-      link.addEventListener('mouseenter', handleLinkHover);
-      link.addEventListener('mouseleave', handleLinkLeave);
+    const enter = () => setVariant('link');
+    const leave = () => setVariant('default');
+
+    links.forEach((el) => {
+      el.addEventListener('mouseenter', enter);
+      el.addEventListener('mouseleave', leave);
     });
 
     return () => {
-      window.removeEventListener('mousemove', mouseMove);
-      links.forEach((link) => {
-        link.removeEventListener('mouseenter', handleLinkHover);
-        link.removeEventListener('mouseleave', handleLinkLeave);
+      window.removeEventListener('mousemove', moveCursor);
+      links.forEach((el) => {
+        el.removeEventListener('mouseenter', enter);
+        el.removeEventListener('mouseleave', leave);
       });
     };
-  }, []);
-
-  const variants = {
-    default: {
-      x: mousePosition.x,
-      y: mousePosition.y,
-      height: 16,
-      width: 16,
-    },
-    link: {
-      x: mousePosition.x,
-      y: mousePosition.y,
-      height: 30,
-      width: 30,
-      backgroundColor: "#f59e0b",
-      mixBlendMode: "difference" as "difference",
-    },
-  };
+  }, [mouseX, mouseY]);
 
   return (
     <motion.div
-      className="custom-cursor hidden md:block"
-      variants={variants}
-      animate={cursorVariant}
-      transition={{ type: "tween", ease: "backOut", duration: 0.15 }}
+      className="custom-cursor fixed top-0 left-0 z-[9999] pointer-events-none hidden md:block"
+      style={{
+        translateX: cursorX,
+        translateY: cursorY,
+        height: variant === 'link' ? 30 : 16,
+        width: variant === 'link' ? 30 : 16,
+        backgroundColor: variant === 'link' ? '#f59e0b' : '#fff',
+        borderRadius: '9999px',
+        mixBlendMode: 'difference',
+      }}
     />
   );
 };

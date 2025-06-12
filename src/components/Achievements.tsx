@@ -50,10 +50,7 @@ const Achievements: React.FC = () => {
                 <p className="text-gray-300 leading-relaxed">
                  Honored during the college farewell ceremony for exceptional personality, leadership, and positive contribution to campus life.
                 </p>
-                <div className="mt-4 flex items-center gap-2">
-                  <Users size={16} className="text-secondary-400" />
-                  <span className="text-gray-400">Led a team of 15+ volunteers</span>
-                </div>
+                
               </div>
             </div>
           </motion.div>
