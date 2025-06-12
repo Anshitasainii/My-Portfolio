@@ -19,36 +19,46 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
+      title: "Portfolio",
+      description: "Designed and developed a responsive portfolio website to showcase projects, skills, and contact information,built with React, Vite, Tailwind CSS and deployed on Netlify",
+      image: "/portfolio.png",
+      technologies: ["React", "Node.js", "Express", "Tailwind CSS","Vite","HTML","CSS"],
+      liveLink: "https://anshitasaini.netlify.app/",
+      githubLink: "https://github.com/Anshitasainii/My-Portfolio",
+      icon: <ShoppingCart size={24} className="text-primary-400" />
+    },
+    {
+      id: 2,
       title: "E-Commerce Platform(User)",
       description: "A full-featured e-commerce platform user authentication using JWT, and secure payment processing. Includes product management, shopping cart, delivery tracking.",
-      image: "https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      image: "/user.png",
       technologies: ["React", "Node.js", "Express", "MongoDB", "Redux", "JWT", "Stripe"],
       liveLink: "https://forever-user-beige.vercel.app/",
       githubLink: "https://github.com/Anshitasainii/E-Commerce",
       icon: <ShoppingCart size={24} className="text-primary-400" />
     },
     {
-      id: 1,
+      id: 3,
       title: "Admin Dashboard(E-Commerce)",
       description: "A full-featured e-commerce platform with admin dashboard ,includes product management like listing products,adding products,remove products and order tracking functionalities.",
-      image: "https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      image: "/admin.png",
       technologies: ["React", "Node.js", "Express", "MongoDB", "Redux", "JWT", "Stripe"],
       liveLink: "https://forever-admin-beige.vercel.app/",
       githubLink: "https://github.com/Anshitasainii/E-Commerce",
       icon: <ShoppingCart size={24} className="text-primary-400" />
     },
     {
-      id: 2,
+      id: 4,
       title: "Blog Platform",
       description: "A content management system for blogs with CRUD operations, user authentication, content moderation, and responsive design. Implemented with MERN stack and MySQL for database management.",
-      image: "https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      technologies: ["React", "Node.js", "Express", "MySQL", "Tailwind CSS"],
+      image: "/blog.png",
+      technologies: ["React", "Node.js", "Express", "MySQL"],
       liveLink: "",
       githubLink: "https://github.com/Anshitasainii/TravelBlogBackend",
       icon: <FileText size={24} className="text-secondary-400" />
     },
     {
-      id: 3,
+      id: 5,
       title: "Banking System App",
       description: "A secure banking application built with PHP and MySQL with transaction management, account transfers, and user authentication. Includes security features like encryption and transaction logs.",
       image: "https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -58,11 +68,11 @@ const Projects: React.FC = () => {
       icon: <Landmark size={24} className="text-accent-400" />
     },
     {
-      id: 3,
+      id: 6,
       title: "Bringger",
-      description: "Another admin dashboard ,includes product management like listing products,adding products,remove products and order tracking functionalities",
-      image: "https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      technologies: ["PHP", "MySQL", "Bootstrap", "jQuery", "AJAX"],
+      description: "Another full-featured E-Commerce admin dashboard ,includes product management like listing products,adding products,remove products and order tracking functionalities like update , cancelled, etc",
+      image: "/bringer.png",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Redux"],
       liveLink: "",
       githubLink: "https://github.com/Anshitasainii/Bringger",
       icon: <LayoutDashboard size={24} className="text-accent-400" />
