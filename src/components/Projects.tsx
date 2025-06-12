@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, ShoppingCart, FileText, Landmark, LayoutDashboard } from 'lucide-react';
+import { ExternalLink, Github, ShoppingCart, FileText, Landmark, LayoutDashboard, UserSquare } from 'lucide-react';
 
 interface Project {
   id: number;
@@ -25,7 +25,7 @@ const Projects: React.FC = () => {
       technologies: ["React", "Node.js", "Express", "Tailwind CSS","Vite","HTML","CSS"],
       liveLink: "https://anshitasaini.netlify.app/",
       githubLink: "https://github.com/Anshitasainii/My-Portfolio",
-      icon: <ShoppingCart size={24} className="text-primary-400" />
+      icon: <UserSquare size={24} className="text-primary-400" />
     },
     {
       id: 2,
