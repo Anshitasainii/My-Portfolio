@@ -26,8 +26,8 @@ const Experience: React.FC = () => {
     {
       id: 2,
       title: "Higher Secondary Education",
-      organization: "National Academy",
-      date: "2017 - 2021",
+      organization: "CBSE",
+      date: "2020 - 2021",
       description: "Completed higher secondary education with a focus on Mathematics and Science.",
       type: 'education',
       delay: 0.2

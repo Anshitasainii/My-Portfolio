@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <p>Designed & Built by Anshita Saini | © {currentYear} All Rights Reserved</p>
+            <p>Designed & Built by Anshita Saini</p>
           </motion.div>
         </div>
       </div>
