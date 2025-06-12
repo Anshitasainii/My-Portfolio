@@ -20,32 +20,34 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus('loading');
-    
-    emailjs
-    .sendForm(
-      'service_qsh3f3k',      // Replace with your actual service ID
-      'template_luit7bd',     // Replace with your actual template ID
+
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
       formRef.current!,
-      'xcJ9pvmqa9QkV4HG0'       // Replace with your actual public key
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
-    .then(() => {
-      setFormStatus('success');
-      setFormData({ name: '', email: '', message: '' });
-    })
-    .catch(() => {
-      setFormStatus('error');
-    });
-};
-      
-     
+
+
+      .then(() => {
+        setFormStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      })
+      .catch((error) => {
+        console.error("EmailJS error:", error);
+        setFormStatus('error');
+      });
+  };
+
+
 
   return (
     <section id="contact" className="py-20 relative">
       {/* Background Elements */}
       <div className="absolute top-1/4 right-1/3 w-80 h-80 bg-primary-500/5 rounded-full filter blur-3xl"></div>
-      
+
       <div className="container mx-auto px-4 md:px-6">
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +62,7 @@ const Contact: React.FC = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <motion.div 
+          <motion.div
             className="glass-card p-8"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -68,7 +70,7 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
-            
+
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary-500/20">
@@ -79,7 +81,7 @@ const Contact: React.FC = () => {
                   <p className="text-gray-400">Alwar, Rajasthan, India</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-secondary-500/20">
                   <Mail className="text-secondary-400" size={24} />
@@ -89,7 +91,7 @@ const Contact: React.FC = () => {
                   <p className="text-gray-400">anshitasaini30@gmail.com</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-accent-500/20">
                   <Phone className="text-accent-400" size={24} />
@@ -100,7 +102,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="mt-8 p-6 glass-card bg-dark-200/50">
               <h4 className="text-lg font-medium text-white mb-4">Connect with me</h4>
               <p className="text-gray-300 mb-4">
@@ -108,7 +110,7 @@ const Contact: React.FC = () => {
               </p>
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -117,7 +119,7 @@ const Contact: React.FC = () => {
           >
             <form ref={formRef} onSubmit={handleSubmit} className="glass-card p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Send me a message</h3>
-              
+
               <div className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-gray-300 mb-2">
@@ -134,7 +136,7 @@ const Contact: React.FC = () => {
                     placeholder="Your name"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-gray-300 mb-2">
                     Email
@@ -150,7 +152,7 @@ const Contact: React.FC = () => {
                     placeholder="your.email@example.com"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-gray-300 mb-2">
                     Message
@@ -167,15 +169,14 @@ const Contact: React.FC = () => {
                   ></textarea>
                 </div>
               </div>
-              
+
               <motion.button
                 type="submit"
                 disabled={formStatus === 'loading'}
-                className={`mt-6 px-6 py-3 rounded-full flex items-center gap-2 justify-center w-full transition-colors ${
-                  formStatus === 'loading' 
-                    ? 'bg-gray-600 cursor-not-allowed' 
+                className={`mt-6 px-6 py-3 rounded-full flex items-center gap-2 justify-center w-full transition-colors ${formStatus === 'loading'
+                    ? 'bg-gray-600 cursor-not-allowed'
                     : 'bg-primary-600 hover:bg-primary-700'
-                }`}
+                  }`}
                 whileHover={{ scale: formStatus === 'loading' ? 1 : 1.05 }}
                 whileTap={{ scale: formStatus === 'loading' ? 1 : 0.95 }}
               >
@@ -204,9 +205,9 @@ const Contact: React.FC = () => {
                   </>
                 )}
               </motion.button>
-              
+
               {formStatus === 'success' && (
-                <motion.p 
+                <motion.p
                   className="mt-4 text-green-400 text-center"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -214,9 +215,9 @@ const Contact: React.FC = () => {
                   Thank you for your message! I'll get back to you soon.
                 </motion.p>
               )}
-              
+
               {formStatus === 'error' && (
-                <motion.p 
+                <motion.p
                   className="mt-4 text-red-400 text-center"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
