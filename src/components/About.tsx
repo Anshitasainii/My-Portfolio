@@ -41,7 +41,7 @@ const About: React.FC = () => {
               or engaging in technical communities to stay updated with the latest industry trends.
             </p>
             <motion.a 
-              href="/Anshita Saini Resume.pdf" 
+              href="/Anshita Saini-Resume.pdf" 
               download
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition-colors"
               whileHover={{ scale: 1.05 }}

@@ -51,24 +51,15 @@ const Projects: React.FC = () => {
       id: 4,
       title: "Blog Platform",
       description: "A content management system for blogs with CRUD operations, user authentication, content moderation, and responsive design. Implemented with MERN stack and MySQL for database management.",
-      image: "/blog.png",
+      image: "/blogg.png",
       technologies: ["React", "Node.js", "Express", "MySQL"],
-      liveLink: "",
-      githubLink: "https://github.com/Anshitasainii/TravelBlogBackend",
+      liveLink: "https://blogging-app-ebon.vercel.app/",
+      githubLink: "https://github.com/Anshitasainii/Blogging-App",
       icon: <FileText size={24} className="text-secondary-400" />
     },
+    
     {
       id: 5,
-      title: "Banking System App",
-      description: "A secure banking application built with PHP and MySQL with transaction management, account transfers, and user authentication. Includes security features like encryption and transaction logs.",
-      image: "https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      technologies: ["PHP", "MySQL", "Bootstrap", "jQuery", "AJAX"],
-      liveLink: "",
-      githubLink: "https://github.com/Anshitasainii/Bank",
-      icon: <Landmark size={24} className="text-accent-400" />
-    },
-    {
-      id: 6,
       title: "Bringger",
       description: "Another full-featured E-Commerce admin dashboard ,includes product management like listing products,adding products,remove products and order tracking functionalities like update , cancelled, etc",
       image: "/bringer.png",
@@ -76,6 +67,15 @@ const Projects: React.FC = () => {
       liveLink: "",
       githubLink: "https://github.com/Anshitasainii/Bringger",
       icon: <LayoutDashboard size={24} className="text-accent-400" />
+    },{
+      id: 6,
+      title: "Banking System App",
+      description: "A secure banking application built with PHP and MySQL with transaction management, account transfers, and user authentication. Includes security features like encryption and transaction logs.",
+      image: "https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      technologies: ["PHP", "MySQL", "Bootstrap", "jQuery", "AJAX"],
+      liveLink: "",
+      githubLink: "https://github.com/Anshitasainii/Bank",
+      icon: <Landmark size={24} className="text-accent-400" />
     }
   ];
 
