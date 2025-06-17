@@ -69,7 +69,7 @@ const Projects: React.FC = () => {
       id: 5,
       title: "Bringger",
       description: "Another full-featured E-Commerce admin dashboard ,includes product management like listing products,adding products,remove products and order tracking functionalities like update , cancelled, etc",
-      image: "/bringger.png",
+      image: "/bringer.png",
       video:"",
       technologies: ["React", "Node.js", "Express", "MongoDB", "Redux"],
       liveLink: "",
