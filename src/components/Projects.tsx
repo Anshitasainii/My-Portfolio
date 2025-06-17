@@ -9,7 +9,7 @@ interface Project {
   title: string;
   description: string;
   image: string;
-  video?: string; // NEW FIELD
+  video?: string; 
   technologies: string[];
   liveLink: string;
   githubLink: string;
@@ -24,8 +24,8 @@ const Projects: React.FC = () => {
       id: 1,
       title: "Portfolio",
       description: "Designed and developed a responsive portfolio website to showcase projects, skills, and contact information,built with React, Vite, Tailwind CSS and deployed on Netlify",
-      image: "/portfolio.png",
-      video:"",
+      image: "",
+      video:"/Portfolio.mp4",
       technologies: ["React", "Node.js", "Express", "Tailwind CSS","Vite","HTML","CSS"],
       liveLink: "https://anshitasaini.netlify.app/",
       githubLink: "https://github.com/Anshitasainii/My-Portfolio",
@@ -35,8 +35,8 @@ const Projects: React.FC = () => {
       id: 2,
       title: "E-Commerce Platform(User)",
       description: "A full-featured e-commerce platform user authentication using JWT, and secure payment processing. Includes product management, shopping cart, delivery tracking.",
-      image: "/user.png",
-      video:"",
+      image: "",
+      video:"/Forever.mp4",
       technologies: ["React", "Node.js", "Express", "MongoDB", "Redux", "JWT", "Stripe"],
       liveLink: "https://forever-user-beige.vercel.app/",
       githubLink: "https://github.com/Anshitasainii/E-Commerce",
@@ -46,8 +46,8 @@ const Projects: React.FC = () => {
       id: 3,
       title: "Admin Dashboard(E-Commerce)",
       description: "A full-featured e-commerce platform with admin dashboard ,includes product management like listing products,adding products,remove products and order tracking functionalities.",
-      image: "/admin.png",
-      video:"",
+      image: "",
+      video:"/Admin.mp4",
       technologies: ["React", "Node.js", "Express", "MongoDB", "Redux", "JWT", "Stripe"],
       liveLink: "https://forever-admin-beige.vercel.app/",
       githubLink: "https://github.com/Anshitasainii/E-Commerce",
@@ -57,8 +57,8 @@ const Projects: React.FC = () => {
       id: 4,
       title: "Blog Platform",
       description: "A content management system for blogs with CRUD operations, user authentication, content moderation, and responsive design. Implemented with MERN stack and MySQL for database management.",
-      image: "/blog.png",
-      video:"",
+      image: "",
+      video:"/Blogging-App.mp4",
       technologies: ["React", "Node.js", "Express", "MySQL"],
       liveLink: "https://blogging-app-ebon.vercel.app/",
       githubLink: "https://github.com/Anshitasainii/Blogging-App",
