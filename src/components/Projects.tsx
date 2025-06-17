@@ -57,7 +57,7 @@ const Projects: React.FC = () => {
       id: 4,
       title: "Blog Platform",
       description: "A content management system for blogs with CRUD operations, user authentication, content moderation, and responsive design. Implemented with MERN stack and MySQL for database management.",
-      image: "/blog.png",
+      image: "/blogg.png",
       video:"",
       technologies: ["React", "Node.js", "Express", "MySQL"],
       liveLink: "https://blogging-app-ebon.vercel.app/",
