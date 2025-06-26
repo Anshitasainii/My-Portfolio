@@ -121,7 +121,7 @@ const Hero: React.FC = () => {
             </div>
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             className="w-full md:w-1/2"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -145,7 +145,7 @@ const Hero: React.FC = () => {
                
               </Carousel>      
                     </div>
-          </motion.div>
+          </motion.div> */}
         </div>
 
         <motion.div
