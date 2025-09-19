@@ -2,9 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { ArrowDown, Github, Linkedin, Code2 } from 'lucide-react';
-import Spline from '@splinetool/react-spline';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
 
 const Hero: React.FC = () => {
   return (
@@ -42,13 +40,9 @@ const Hero: React.FC = () => {
                 sequence={[
                   'Full Stack Developer',
                   2000,
-                  'MERN Stack Expert',
+                  'AI & LangChain Enthusiast',
                   2000,
-                  'Java Developer',
-                  2000,
-                  'Cloud Computing Enthusiast',
-                  2000,
-                  'DSA Problem Solver',
+                  'MERN & MEAN Stack Developer',
                   2000,
                 ]}
                 wrapper="span"

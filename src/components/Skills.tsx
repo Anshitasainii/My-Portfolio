@@ -45,27 +45,27 @@ const Skills: React.FC = () => {
     {
       title: "Programming Languages",
       icon: <Code className="text-primary-400" />,
-      skills: ["Java", "JavaScript", "TypeScript", "C++", "C", "HTML", "CSS"],
+      skills: ["Python","Java", "JavaScript", "TypeScript", "C++", "C", "HTML", "CSS"],
     },
     {
       title: "Web Development",
       icon: <Terminal className="text-secondary-400" />,
-      skills: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "JWT", "Tailwind CSS"],
+      skills: [  "Angular","React.js", "Node.js", "FastAPI", "Express.js", "MongoDB", "REST APIs", "JWT", "Tailwind CSS"],
     },
     {
       title: "Databases",
       icon: <Database className="text-accent-400" />,
       skills: ["MongoDB", "MySQL", "MongoDB Atlas", "Mongoose"],
     },
+     {
+      title: "AI & Frameworks",
+      icon: <Server className="text-primary-400" />,
+      skills: ["LangChain", "OpenAI API","Groq API", "Machine Learning Basics"],
+    },
     {
       title: "Tools & Platforms",
       icon: <Server className="text-primary-400" />,
-      skills: ["Git", "GitHub", "VS Code", "Postman", "Vercel", "AWS"],
-    },
-    {
-      title: "Development Practices",
-      icon: <Workflow className="text-secondary-400" />,
-      skills: ["Agile", "CI/CD", "Test-Driven Development", "RESTful APIs"],
+      skills: ["Git", "GitHub", "VS Code", "Postman", "Vercel", "AWS","Netlify"],
     },
     {
       title: "Soft Skills",
