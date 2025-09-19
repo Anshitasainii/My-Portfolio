@@ -16,7 +16,7 @@ const Experience: React.FC = () => {
   const timelineItems: TimelineItem[] = [
     {
       id: 1,
-      title: "Software Engineer",
+      title: "Software Engineer Intern",
       organization: "REI Systems",
       date: "July 2025 - Present",
       description:
